@@ -1,0 +1,13 @@
+<div *ngIf="watchlist">
+  <h2>Details of watchlist {{watchlist.name | uppercase}}</h2>
+    <div><span>id: </span>{{watchlist.id}}</div>
+    <div> <label>name: 
+            <input [(ngModel)]="watchlist.name" placeholder="name" />
+          </label>
+    </div>
+</div>
+
+<br />
+<button (click)="goBack()">go back</button>
+&nbsp;
+<button (click)="save()">save</button>

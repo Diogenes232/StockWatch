@@ -1,0 +1,13 @@
+<div id="search-component">
+  <h4>Watchlist Search</h4>
+
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let watchlist of watchlists$ | async" >
+      <a routerLink="/detail/{{watchlist.id}}">
+        {{watchlist.name}}
+      </a>
+    </li>
+  </ul>
+</div>
